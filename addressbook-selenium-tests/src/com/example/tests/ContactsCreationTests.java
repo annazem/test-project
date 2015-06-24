@@ -61,7 +61,7 @@ private void fillContactForm(ContacnData contact) {
     driver.findElement(By.name("email2")).clear();
     driver.findElement(By.name("email2")).sendKeys(contact.mail2);
     driver.findElement(By.name("byear")).clear();
-    driver.findElement(By.name("byear")).sendKeys("1990");
+    driver.findElement(By.name("byear")).sendKeys(contact.year);
     driver.findElement(By.name("address2")).clear();
     driver.findElement(By.name("address2")).sendKeys(contact.address2);
     driver.findElement(By.name("phone2")).clear();
