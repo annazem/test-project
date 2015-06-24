@@ -10,14 +10,12 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 public class TestBase {
 
-	private static WebDriver driver;
+	protected static WebDriver driver;
 	private static String baseUrl;
 	private static boolean acceptNextAlert = true;
 	private static StringBuffer verificationErrors = new StringBuffer();
@@ -38,31 +36,6 @@ public class TestBase {
 	    }
 	  }
 	
-	protected void returnToGroupsPage() {
-	    driver.findElement(By.linkText("group page")).click();
-	}
-
-	protected void submitGroupCreation() {
-	    driver.findElement(By.name("submit")).click();
-	}
-
-	protected void fillGroupForm(GroupData group) {
-	    driver.findElement(By.name("group_name")).clear();
-	    driver.findElement(By.name("group_name")).sendKeys(group.name);
-	    driver.findElement(By.name("group_header")).clear();
-	    driver.findElement(By.name("group_header")).sendKeys(group.header);
-	    driver.findElement(By.name("group_footer")).clear();
-	    driver.findElement(By.name("group_footer")).sendKeys(group.footer);
-	}
-
-	protected void initGroupCreation() {
-	    driver.findElement(By.name("new")).click();
-	}
-
-	protected void gotoGroupsPage() {
-	    driver.findElement(By.linkText("groups")).click();
-	}
-
 	protected void openMaimPage() {
 	    driver.get(baseUrl + "/addressbookv4.1.4/");
 	}
