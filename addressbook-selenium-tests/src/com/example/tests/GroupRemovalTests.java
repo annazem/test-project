@@ -9,7 +9,6 @@ public void deleteSomeGroup() {
 	app.getNavigationHelper().openMaimPage();
 	app.getNavigationHelper().gotoGroupsPage();
 	app.getGroupHelper().deleteGroup(1);
-	
 	app.getGroupHelper().returnToGroupsPage();
 }
  

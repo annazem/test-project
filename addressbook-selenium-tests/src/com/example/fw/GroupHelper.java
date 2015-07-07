@@ -3,7 +3,6 @@ package com.example.fw;
 import org.openqa.selenium.By;
 
 import com.example.tests.GroupData;
-import com.example.tests.TestBase;
 
 public class GroupHelper extends HelperBase{
 
@@ -49,5 +48,7 @@ public class GroupHelper extends HelperBase{
 		click(By.name("update"));
 		
 	}
+
+	
 
 }

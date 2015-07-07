@@ -3,7 +3,6 @@ package com.example.fw;
 import org.openqa.selenium.By;
 
 import com.example.tests.ContacnData;
-import com.example.tests.TestBase;
 
 public class ContactHelper extends HelperBase {
 
@@ -38,4 +37,25 @@ public class ContactHelper extends HelperBase {
 		click(By.linkText("home page"));
 	}
 
+	public void deleteContact(int index) {
+		selectContactByIndex(index);
+		click(By.xpath("(//input[@name='update'])[2]"));
+		
+	}
+
+	private void selectContactByIndex(int index) {
+		click(By.xpath("(//img[@alt='Edit'])["+ index +"]"));
+	}
+
+	public void initContactModification(int index) {
+		selectContactByIndex(index);
+	}
+	
+
+	public void submitContactModification() {
+		click(By.xpath("(//input[@name='update'])[1]"));
+		
+	}
+
+	
 }
