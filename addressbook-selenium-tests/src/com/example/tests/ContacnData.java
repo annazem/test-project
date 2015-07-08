@@ -1,6 +1,6 @@
 package com.example.tests;
 
-public class ContacnData {
+public class ContacnData implements Comparable<ContacnData> {
 	public String fname;
 	public String lname;
 	public String address1;
@@ -32,4 +32,36 @@ public class ContacnData {
 		this.address2 = address2;
 		this.phonenumber = phonenumber;
 	}
+
+	@Override
+	public String toString() {
+		return "ContacnData [fname=" + fname + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		//result = prime * result + ((fname == null) ? 0 : fname.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ContacnData other = (ContacnData) obj;
+		if (fname == null) {
+			if (other.fname != null)
+				return false;
+		} else if (!fname.equals(other.fname))
+			return false;
+		return true;
+	}
+	
+	
 }
