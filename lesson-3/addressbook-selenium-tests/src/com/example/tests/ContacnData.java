@@ -32,4 +32,46 @@ public class ContacnData {
 		this.address2 = address2;
 		this.phonenumber = phonenumber;
 	}
+	
+	@Override
+	public String toString() {
+		return "ContacnData [fname=" + fname + ", lname=" + lname 
+							+ ", hnumber=" + hnumber + ", mail1=" + mail1 + "]"; 
+
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) 
+					return true; 
+			 		if (obj == null) 
+						return false; 
+			 		if (getClass() != obj.getClass()) 
+						return false; 
+			 		ContacnData other = (ContacnData) obj; 
+					if (fname == null) { 
+					if (other.fname != null) 
+			 				return false; 
+			 		} else if (!fname.equals(other.fname)) 
+			 			return false; 
+			 		return true; 
+
+	}
+	
+	public int compareTo(ContacnData other) { 
+ 		if (this.lname.toLowerCase().equals(other.lname.toLowerCase())) {   
+ 				if (this.fname.toLowerCase().equals(other.fname.toLowerCase())) {   
+ 			 				if (this.mail1.toLowerCase().equals(other.mail1.toLowerCase())) {   
+ 			 					return this.hnumber.replace(" ", "").toLowerCase().compareTo(other.hnumber.replace(" ", "").toLowerCase());   
+			 				} else {   
+ 								return this.mail1.toLowerCase().compareTo(other.mail1.toLowerCase());   
+ 			 				}   
+ 			 			} else {   
+			 				return this.fname.toLowerCase().compareTo(other.fname.toLowerCase());   
+ 			 			}   
+ 			 	} else {   
+ 			 			return this.lname.toLowerCase().compareTo(other.lname.toLowerCase());   
+			 		}   
+ 			 	}   
+
 }

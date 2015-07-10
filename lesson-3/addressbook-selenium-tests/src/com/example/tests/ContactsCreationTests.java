@@ -1,14 +1,19 @@
 package com.example.tests;
-
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import static org.testng.Assert.assertEquals;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
-public class ContactsCreationTests extends TestBase {
+@Test public class ContactsCreationTests extends TestBase {
 
-  @Test
-  public void testNonEmptyContactCreation() throws Exception {
+  public void testNonEmptyContactCreation(ContacnData contact) throws Exception {
 	app.getNavigationHelper().openMaimPage();
 	app.getContactHelper().gotoContactsPage();
-	ContacnData contact = new ContacnData();
+	//ContacnData contact = new ContacnData();
+	List<ContacnData> oldList1 = app.getContactHelper().getContacts();
 	contact.fname = "Anna";
 	contact.lname = "Zemskova";
 	contact.address1 = "Address 1";
@@ -23,9 +28,13 @@ public class ContactsCreationTests extends TestBase {
 	app.getContactHelper().fillContactForm(contact);
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().returnContactPage();
+    
+    List<ContacnData> newList = app.getContactHelper().getContacts();
+    oldList1.add(contact);
+    Collections.sort(oldList1);
+    AssertJUnit.assertEquals(newList, oldList1);
   }
   
-  @Test
   public void testEmptyContactCreation() throws Exception {
 	app.getNavigationHelper().openMaimPage();
 	app.getContactHelper().gotoContactsPage();

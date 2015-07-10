@@ -35,6 +35,24 @@ public class TestBase {
 		
 	}
 	
+	@DataProvider 
+	public Iterator<Object[]> randomValidContactGenerator() { 
+ 		List<Object[]> list = new ArrayList<Object[]>(); 
+ 		 
+ 		for (int i=0;i<3; i++){ 
+ 		 
+ 			ContacnData contact = new ContacnData(); 
+ 			 
+				contact.fname= generateRandomString(); 
+ 				contact.lname= generateRandomString(); 
+ 			 
+ 			list.add(new Object[] {contact}); 
+		} 
+ 		 
+ 		return list.iterator(); 
+ 		 
+ 	} 
+	
 	public String generateRandomString(){
 		
 		Random rnd = new Random();
@@ -50,9 +68,6 @@ public class TestBase {
 		}
 		
 		
-		
-		
-
 
 	@BeforeTest
 	public void setUp() throws Exception {
