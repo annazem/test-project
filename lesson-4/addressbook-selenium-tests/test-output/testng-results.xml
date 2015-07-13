@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="36033" started-at="2015-07-13T07:34:40Z" finished-at="2015-07-13T07:35:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="36033" started-at="2015-07-13T07:34:40Z" finished-at="2015-07-13T07:35:16Z">
+      <class name="com.example.tests.ContactsCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactsCreationTests@18ef96]" name="setUp" is-config="true" duration-ms="5550" started-at="2015-07-13T10:34:40Z" finished-at="2015-07-13T10:34:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContacnData)[pri:0, instance:com.example.tests.ContactsCreationTests@18ef96]" name="testNonEmptyContactCreation" duration-ms="10025" started-at="2015-07-13T10:34:45Z" data-provider="randomValidContactGenerator" finished-at="2015-07-13T10:34:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContacnData [fname=test925713059, lname=test-1667228232, hnumber=null, mail1=null]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContacnData)[pri:0, instance:com.example.tests.ContactsCreationTests@18ef96]" name="testNonEmptyContactCreation" duration-ms="9816" started-at="2015-07-13T10:34:55Z" data-provider="randomValidContactGenerator" finished-at="2015-07-13T10:35:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContacnData [fname=test-653229042, lname=test-1571409625, hnumber=null, mail1=null]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContacnData)[pri:0, instance:com.example.tests.ContactsCreationTests@18ef96]" name="testNonEmptyContactCreation" duration-ms="10178" started-at="2015-07-13T10:35:05Z" data-provider="randomValidContactGenerator" finished-at="2015-07-13T10:35:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContacnData [fname=test-1079385545, lname=test1201217052, hnumber=null, mail1=null]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactsCreationTests@18ef96]" name="tearDown" is-config="true" duration-ms="455" started-at="2015-07-13T10:35:15Z" finished-at="2015-07-13T10:35:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.ContactsCreationTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

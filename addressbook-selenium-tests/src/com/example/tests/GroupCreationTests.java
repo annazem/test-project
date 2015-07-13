@@ -1,59 +1,56 @@
 package com.example.tests;
-import java.util.Collections;
-import java.util.List;
-import static org.testng.Assert.assertEquals;
 
-
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class GroupCreationTests extends TestBase {
 	
-	 @Test(dataProvider ="randomValidGroupgenerator")
-	  public void testGroupCreationValidData(GroupData group) throws Exception {
-		app.getNavigationHelper().openMaimPage();
-		app.getNavigationHelper().gotoGroupsPage();
-		List<GroupData> oldList = app.getGroupHelper().getGroups();
-		app.getGroupHelper().initGroupCreation();
-	    GroupData group1 = new GroupData();
-	    group1.name = "sdf";
-	    group1.header = "header1 1";
-	    group1.footer = "footer 1";
-		app.getGroupHelper().fillGroupForm(group1);
-	    app.getGroupHelper().submitGroupCreation();
-	    app.getGroupHelper().returnToGroupsPage();
-	    
-	    List<GroupData> newList = app.getGroupHelper().getGroups();
-	    
-	//  assertEquals(newList.size(), oldList.size()+1);
-	    oldList.add(group1);
-	    Collections.sort(oldList);
-	    assertEquals(newList, oldList);
-	  }
+  @Test
+  public void testNonEmptyGroupCreation() throws Exception {
+	openMaimPage();
+	gotoGroupsPage();
+    initGroupCreation();
+    GroupData group = new GroupData();
+    group.name = "group name 1";
+    group.header = "header1 1";
+    group.footer = "footer 1";
+	fillGroupForm(group);
+    submitGroupCreation();
+    returnToGroupsPage();
+  }
 
-	  @Test
-	  public void testEmptyGroupCreation() throws Exception {
-		app.getNavigationHelper().openMaimPage();
-		app.getNavigationHelper().gotoGroupsPage();
-		List<GroupData> oldList = app.getGroupHelper().getGroups();
-		GroupData group = new GroupData();
-		group.name = "";
-		group.header = "";
-		group.footer = "";
-	   
-		app.getGroupHelper().initGroupCreation(); 
-	    app.getGroupHelper().fillGroupForm(group);
-	    app.getGroupHelper().submitGroupCreation();
-	    app.getGroupHelper().returnToGroupsPage();
-	    
-	    
-	    List<GroupData> newList = app.getGroupHelper().getGroups();
-	    
+  @Test
+  public void testEmptyGroupCreation() throws Exception {
+	openMaimPage();
+	gotoGroupsPage();
+    initGroupCreation();
+    fillGroupForm(new GroupData("", "", ""));
+    submitGroupCreation();
+    returnToGroupsPage();
+  }
 
-	    //  assertEquals(newList.size(), oldList.size()+1);
-	      oldList.add(group);
-	      Collections.sort(oldList);
-	      assertEquals(newList, oldList);
-	  }
+protected void gotoGroupsPage() {
+    driver.findElement(By.linkText("groups")).click();
+}
 
+protected void returnToGroupsPage() {
+    driver.findElement(By.linkText("group page")).click();
+}
 
+protected void submitGroupCreation() {
+    driver.findElement(By.name("submit")).click();
+}
+
+protected void fillGroupForm(GroupData group) {
+    driver.findElement(By.name("group_name")).clear();
+    driver.findElement(By.name("group_name")).sendKeys(group.name);
+    driver.findElement(By.name("group_header")).clear();
+    driver.findElement(By.name("group_header")).sendKeys(group.header);
+    driver.findElement(By.name("group_footer")).clear();
+    driver.findElement(By.name("group_footer")).sendKeys(group.footer);
+}
+
+protected void initGroupCreation() {
+    driver.findElement(By.name("new")).click();
+}
 }
