@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" total="4" passed="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6505" started-at="2015-07-20T10:04:54Z" finished-at="2015-07-20T10:05:01Z">
+  <suite name="Default suite" duration-ms="6331" started-at="2015-07-20T14:08:33Z" finished-at="2015-07-20T14:08:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6505" started-at="2015-07-20T10:04:54Z" finished-at="2015-07-20T10:05:01Z">
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@18ef96]" name="setUp" is-config="true" duration-ms="6049" started-at="2015-07-20T13:04:54Z" finished-at="2015-07-20T13:05:00Z">
+    <test name="Default test" duration-ms="6331" started-at="2015-07-20T14:08:33Z" finished-at="2015-07-20T14:08:39Z">
+      <class name="com.example.tests.GroupRemovalTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupRemovalTests@2280cdac]" name="setUp" is-config="true" duration-ms="5902" started-at="2015-07-20T17:08:33Z" finished-at="2015-07-20T17:08:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testGroupCreationValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@18ef96]" name="testGroupCreationValidData" duration-ms="10" started-at="2015-07-20T13:05:00Z" data-provider="groupsFromFile" finished-at="2015-07-20T13:05:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=, header=null, footer=null]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="deleteSomeGroup()[pri:0, instance:com.example.tests.GroupRemovalTests@2280cdac]" name="deleteSomeGroup" duration-ms="8" started-at="2015-07-20T17:08:39Z" finished-at="2015-07-20T17:08:39Z">
           <exception class="java.lang.Error">
             <message>
               <![CDATA[Unresolved compilation problems: 
@@ -34,7 +27,7 @@
 	at com.example.utils.SortedListOf.<init>(SortedListOf.java:11)
 	at com.example.fw.GroupHelper.rebuildCache(GroupHelper.java:28)
 	at com.example.fw.GroupHelper.getGroups(GroupHelper.java:23)
-	at com.example.tests.GroupCreationTests.testGroupCreationValidData(GroupCreationTests.java:30)
+	at com.example.tests.GroupRemovalTests.deleteSomeGroup(GroupRemovalTests.java:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -56,182 +49,19 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
 	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationValidData -->
-        <test-method status="FAIL" signature="testGroupCreationValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@18ef96]" name="testGroupCreationValidData" duration-ms="1" started-at="2015-07-20T13:05:00Z" data-provider="groupsFromFile" finished-at="2015-07-20T13:05:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test344269969, header=null, footer=null]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types List<T> and Collection<T>
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types Collection<T> and Iterable<T>
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types List<T> and Collection<T>
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types Collection<T> and Iterable<T>
-
-	at com.example.utils.SortedListOf.<init>(SortedListOf.java:11)
-	at com.example.fw.GroupHelper.rebuildCache(GroupHelper.java:28)
-	at com.example.fw.GroupHelper.getGroups(GroupHelper.java:23)
-	at com.example.tests.GroupCreationTests.testGroupCreationValidData(GroupCreationTests.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationValidData -->
-        <test-method status="FAIL" signature="testGroupCreationValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@18ef96]" name="testGroupCreationValidData" duration-ms="1" started-at="2015-07-20T13:05:00Z" data-provider="groupsFromFile" finished-at="2015-07-20T13:05:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-593068875, header=null, footer=null]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types List<T> and Collection<T>
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types Collection<T> and Iterable<T>
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types List<T> and Collection<T>
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types Collection<T> and Iterable<T>
-
-	at com.example.utils.SortedListOf.<init>(SortedListOf.java:11)
-	at com.example.fw.GroupHelper.rebuildCache(GroupHelper.java:28)
-	at com.example.fw.GroupHelper.getGroups(GroupHelper.java:23)
-	at com.example.tests.GroupCreationTests.testGroupCreationValidData(GroupCreationTests.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationValidData -->
-        <test-method status="FAIL" signature="testGroupCreationValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@18ef96]" name="testGroupCreationValidData" duration-ms="0" started-at="2015-07-20T13:05:00Z" data-provider="groupsFromFile" finished-at="2015-07-20T13:05:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test1448348211, header=null, footer=null]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types List<T> and Collection<T>
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types Collection<T> and Iterable<T>
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types List<T> and Collection<T>
-	Duplicate methods named spliterator with the parameters () and () are inherited from the types Collection<T> and Iterable<T>
-
-	at com.example.utils.SortedListOf.<init>(SortedListOf.java:11)
-	at com.example.fw.GroupHelper.rebuildCache(GroupHelper.java:28)
-	at com.example.fw.GroupHelper.getGroups(GroupHelper.java:23)
-	at com.example.tests.GroupCreationTests.testGroupCreationValidData(GroupCreationTests.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@18ef96]" name="tearDown" is-config="true" duration-ms="429" started-at="2015-07-20T13:05:00Z" finished-at="2015-07-20T13:05:01Z">
+        </test-method> <!-- deleteSomeGroup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupRemovalTests@2280cdac]" name="tearDown" is-config="true" duration-ms="414" started-at="2015-07-20T17:08:39Z" finished-at="2015-07-20T17:08:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
+      </class> <!-- com.example.tests.GroupRemovalTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
