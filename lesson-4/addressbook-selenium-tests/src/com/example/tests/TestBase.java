@@ -41,9 +41,7 @@ public class TestBase {
 			ContactData contact = new ContactData()
 			.withFname(generateRandomString())
 			.withLname(generateRandomString());
-			
-			//group.header = generateRandomString();
-			//group.footer =generateRandomString();
+
 			list.add(new Object[] {contact});
 		}
 		
