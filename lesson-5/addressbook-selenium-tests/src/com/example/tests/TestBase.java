@@ -31,7 +31,7 @@ public class TestBase {
 		return wrapGroupForDataProvider(generateRandomGroups(5)).iterator();
 		
 	}
-	private List<Object[]> wrapGroupForDataProvider(List<GroupData> groups) {
+	public static List<Object[]> wrapGroupForDataProvider(List<GroupData> groups) {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (GroupData group : groups) {
 			list.add(new Object[]{group});
@@ -45,7 +45,7 @@ public class TestBase {
 	}
 	
 	
-	private List<Object[]> wrapContactForDataProvider(List<ContactData> contacts) {
+	public static List<Object[]> wrapContactForDataProvider(List<ContactData> contacts) {
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (ContactData contact : contacts) {
 			list.add(new Object[]{contact});
